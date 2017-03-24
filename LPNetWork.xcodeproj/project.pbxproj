@@ -15,6 +15,9 @@
 		181CE0171E84B749000A7049 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181CE0151E84B749000A7049 /* LaunchScreen.storyboard */; };
 		181CE0221E84B74A000A7049 /* LPNetWorkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CE0211E84B74A000A7049 /* LPNetWorkTests.m */; };
 		181CE02D1E84B74A000A7049 /* LPNetWorkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CE02C1E84B74A000A7049 /* LPNetWorkUITests.m */; };
+		181CE03D1E84C027000A7049 /* LPNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CE03C1E84C027000A7049 /* LPNetWorkManager.m */; };
+		181CE0401E84ED4A000A7049 /* LPApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CE03F1E84ED4A000A7049 /* LPApiManager.m */; };
+		1A9F2735F0B7DB4C483AAEEE /* libPods-LPNetWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A0A0048620047641FB54E5 /* libPods-LPNetWork.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,13 @@
 		181CE0281E84B74A000A7049 /* LPNetWorkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LPNetWorkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		181CE02C1E84B74A000A7049 /* LPNetWorkUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPNetWorkUITests.m; sourceTree = "<group>"; };
 		181CE02E1E84B74A000A7049 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		181CE03B1E84C027000A7049 /* LPNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPNetWorkManager.h; sourceTree = "<group>"; };
+		181CE03C1E84C027000A7049 /* LPNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPNetWorkManager.m; sourceTree = "<group>"; };
+		181CE03E1E84ED4A000A7049 /* LPApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPApiManager.h; sourceTree = "<group>"; };
+		181CE03F1E84ED4A000A7049 /* LPApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPApiManager.m; sourceTree = "<group>"; };
+		6E9DF0BEB11573BCBB48579E /* Pods-LPNetWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPNetWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LPNetWork/Pods-LPNetWork.debug.xcconfig"; sourceTree = "<group>"; };
+		D4A0A0048620047641FB54E5 /* libPods-LPNetWork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LPNetWork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4E608F6A0858957AD5E8F99 /* Pods-LPNetWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPNetWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-LPNetWork/Pods-LPNetWork.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A9F2735F0B7DB4C483AAEEE /* libPods-LPNetWork.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,10 +92,13 @@
 		181CDFFB1E84B749000A7049 = {
 			isa = PBXGroup;
 			children = (
+				181CE03A1E84BFCC000A7049 /* LPNetWorkManager */,
 				181CE0061E84B749000A7049 /* LPNetWork */,
 				181CE0201E84B74A000A7049 /* LPNetWorkTests */,
 				181CE02B1E84B74A000A7049 /* LPNetWorkUITests */,
 				181CE0051E84B749000A7049 /* Products */,
+				D7E35AFAA15C43FAF691C3BE /* Pods */,
+				A84D2C35D2F9B3941D2749DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +154,34 @@
 			path = LPNetWorkUITests;
 			sourceTree = "<group>";
 		};
+		181CE03A1E84BFCC000A7049 /* LPNetWorkManager */ = {
+			isa = PBXGroup;
+			children = (
+				181CE03B1E84C027000A7049 /* LPNetWorkManager.h */,
+				181CE03C1E84C027000A7049 /* LPNetWorkManager.m */,
+				181CE03E1E84ED4A000A7049 /* LPApiManager.h */,
+				181CE03F1E84ED4A000A7049 /* LPApiManager.m */,
+			);
+			path = LPNetWorkManager;
+			sourceTree = "<group>";
+		};
+		A84D2C35D2F9B3941D2749DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4A0A0048620047641FB54E5 /* libPods-LPNetWork.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7E35AFAA15C43FAF691C3BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E9DF0BEB11573BCBB48579E /* Pods-LPNetWork.debug.xcconfig */,
+				F4E608F6A0858957AD5E8F99 /* Pods-LPNetWork.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +189,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 181CE0311E84B74A000A7049 /* Build configuration list for PBXNativeTarget "LPNetWork" */;
 			buildPhases = (
+				5402E7245F95BF829EC0C162 /* [CP] Check Pods Manifest.lock */,
 				181CE0001E84B749000A7049 /* Sources */,
 				181CE0011E84B749000A7049 /* Frameworks */,
 				181CE0021E84B749000A7049 /* Resources */,
+				E1E2AEF0618393BE5AE46390 /* [CP] Embed Pods Frameworks */,
+				072852844B22EB762325B9F3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,6 +313,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		072852844B22EB762325B9F3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LPNetWork/Pods-LPNetWork-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5402E7245F95BF829EC0C162 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E1E2AEF0618393BE5AE46390 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LPNetWork/Pods-LPNetWork-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		181CE0001E84B749000A7049 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -275,7 +368,9 @@
 			files = (
 				181CE00F1E84B749000A7049 /* ViewController.m in Sources */,
 				181CE00C1E84B749000A7049 /* AppDelegate.m in Sources */,
+				181CE03D1E84C027000A7049 /* LPNetWorkManager.m in Sources */,
 				181CE0091E84B749000A7049 /* main.m in Sources */,
+				181CE0401E84ED4A000A7049 /* LPApiManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +517,7 @@
 		};
 		181CE0321E84B74A000A7049 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E9DF0BEB11573BCBB48579E /* Pods-LPNetWork.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LPNetWork/Info.plist;
@@ -433,6 +529,7 @@
 		};
 		181CE0331E84B74A000A7049 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4E608F6A0858957AD5E8F99 /* Pods-LPNetWork.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LPNetWork/Info.plist;
@@ -507,6 +604,7 @@
 				181CE0331E84B74A000A7049 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		181CE0341E84B74A000A7049 /* Build configuration list for PBXNativeTarget "LPNetWorkTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +613,7 @@
 				181CE0361E84B74A000A7049 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		181CE0371E84B74A000A7049 /* Build configuration list for PBXNativeTarget "LPNetWorkUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +622,7 @@
 				181CE0391E84B74A000A7049 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
