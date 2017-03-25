@@ -6,6 +6,14 @@
 //  Copyright © 2017年 lpdev.com. All rights reserved.
 //
 
+#ifndef ASLog
+#if DEBUG
+#define ASLog(fmt, ...) NSLog((@"%s [Line %d] " fmt),__PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#define ASLog(fmt, ...)
+#endif
+#endif
+
 #import <Foundation/Foundation.h>
 
 static NSTimeInterval kNetworkingTimeoutSeconds = 10.0f; //请求超时设置（单位：秒）
@@ -20,9 +28,8 @@ typedef NS_ENUM(NSUInteger, LPApiRequestType) {
 typedef NS_ENUM(NSUInteger, LPApiErrorType) {
     LPApiErrorTypeDefault = 0,
     LPApiErrorTypeSuccess,           //API请求成功且返回数据正确，此时manager的数据是可以直接拿来使用的。
-    LPApiErrorTypeTimeout,           //请求超时。
-    LPApiErrorTypeNoNetWork,         //网络不通。
     LPApiErrorTypeFail,              //请求失败
+    LPApiErrorTypeCancelled,         //取消网络请求
 };
 
 typedef void(^LPCallback)(id responseObject, LPApiErrorType errorType);

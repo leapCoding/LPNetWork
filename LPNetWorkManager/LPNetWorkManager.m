@@ -121,7 +121,7 @@ static NSMutableArray *requestTasks;
     // 请求失败时的回调
     void (^failureWrap)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) = ^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
         if (callback) {
-            callback(nil,LPApiErrorTypeFail);
+            callback(nil,[self errorTypeWithCode:error.code]);
         }
     };
 
@@ -144,6 +144,18 @@ static NSMutableArray *requestTasks;
 #pragma mark --取消当前所有网络请求
 - (void)cancelAllRequest {
     [self.sessionManager.operationQueue cancelAllOperations];
+}
+
+#pragma makr --解析错误码
+- (LPApiErrorType)errorTypeWithCode:(NSInteger)code {
+    LPApiErrorType errorType = LPApiErrorTypeDefault;
+    if (code == -999 || code == -1012) {
+        errorType = LPApiErrorTypeCancelled;
+    }else {
+        errorType = LPApiErrorTypeFail;
+    }
+    
+    return errorType;
 }
 
 @end

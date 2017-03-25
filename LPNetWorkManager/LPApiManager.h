@@ -6,25 +6,15 @@
 //  Copyright © 2017年 lpdev.com. All rights reserved.
 //
 
-#ifndef ASLog
-#if DEBUG
-#define ASLog(fmt, ...) NSLog((@"%s [Line %d] " fmt),__PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
-#else
-#define ASLog(fmt, ...)
-#endif
-#endif
-
 #import <Foundation/Foundation.h>
 #import "LPNetWorkManager.h"
+#import "YYKit.h"
 @class LPNetWorkResponse;
 @interface LPApiManager : NSObject
 
 typedef void (^ResponseBlock)(LPNetWorkResponse *response);
 
-/**
- *  网络请求requestUrl
- */
-
+/** 网络请求requestUrl*/
 @property (nonatomic, copy) NSString *requestUrl;
 
 /** 网络请求类型*/
@@ -41,6 +31,11 @@ typedef void (^ResponseBlock)(LPNetWorkResponse *response);
      className:(Class)className
  responseBlock:(ResponseBlock)responseBlock;
 
++ (instancetype)postUrl:(NSString *)url
+            parameters:(NSDictionary *)parameters
+             className:(Class)className
+         responseBlock:(ResponseBlock)responseBlock;
+
 + (void)cancelAllRequest;
 
 + (void)cancelRequestWithURL:(NSString *)url;
@@ -53,5 +48,9 @@ typedef void (^ResponseBlock)(LPNetWorkResponse *response);
 @property (nonatomic, copy) NSString *message;
 @property (nonatomic, strong) NSDictionary *data;
 @property (nonatomic, assign) NSInteger code;
+/** 解析后的对象/数组 */
+@property (nonatomic, strong) id result;
+
+- (instancetype)initWithResult:(NSDictionary *)result className:(Class)className;
 
 @end

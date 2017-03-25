@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C21C0B71E86442C00B10D2B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C21C0B61E86442C00B10D2B /* SecondViewController.m */; };
+		0C21C0B91E8647DC00B10D2B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C21C0B81E8647DC00B10D2B /* Localizable.strings */; };
+		0C21C0BC1E864CE700B10D2B /* LPDemoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C21C0BB1E864CE700B10D2B /* LPDemoModel.m */; };
 		181CE0091E84B749000A7049 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CE0081E84B749000A7049 /* main.m */; };
 		181CE00C1E84B749000A7049 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CE00B1E84B749000A7049 /* AppDelegate.m */; };
 		181CE00F1E84B749000A7049 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CE00E1E84B749000A7049 /* ViewController.m */; };
@@ -38,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C21C0B51E86442C00B10D2B /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		0C21C0B61E86442C00B10D2B /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		0C21C0B81E8647DC00B10D2B /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		0C21C0BA1E864CE700B10D2B /* LPDemoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPDemoModel.h; sourceTree = "<group>"; };
+		0C21C0BB1E864CE700B10D2B /* LPDemoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPDemoModel.m; sourceTree = "<group>"; };
 		181CE0041E84B749000A7049 /* LPNetWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LPNetWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		181CE0081E84B749000A7049 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		181CE00A1E84B749000A7049 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -119,11 +127,16 @@
 				181CE00B1E84B749000A7049 /* AppDelegate.m */,
 				181CE00D1E84B749000A7049 /* ViewController.h */,
 				181CE00E1E84B749000A7049 /* ViewController.m */,
+				0C21C0BA1E864CE700B10D2B /* LPDemoModel.h */,
+				0C21C0BB1E864CE700B10D2B /* LPDemoModel.m */,
+				0C21C0B51E86442C00B10D2B /* SecondViewController.h */,
+				0C21C0B61E86442C00B10D2B /* SecondViewController.m */,
 				181CE0101E84B749000A7049 /* Main.storyboard */,
 				181CE0131E84B749000A7049 /* Assets.xcassets */,
 				181CE0151E84B749000A7049 /* LaunchScreen.storyboard */,
 				181CE0181E84B749000A7049 /* Info.plist */,
 				181CE0071E84B749000A7049 /* Supporting Files */,
+				0C21C0B81E8647DC00B10D2B /* Localizable.strings */,
 			);
 			path = LPNetWork;
 			sourceTree = "<group>";
@@ -292,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				181CE0171E84B749000A7049 /* LaunchScreen.storyboard in Resources */,
+				0C21C0B91E8647DC00B10D2B /* Localizable.strings in Resources */,
 				181CE0141E84B749000A7049 /* Assets.xcassets in Resources */,
 				181CE0121E84B749000A7049 /* Main.storyboard in Resources */,
 			);
@@ -366,10 +380,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C21C0B71E86442C00B10D2B /* SecondViewController.m in Sources */,
 				181CE00F1E84B749000A7049 /* ViewController.m in Sources */,
 				181CE00C1E84B749000A7049 /* AppDelegate.m in Sources */,
 				181CE03D1E84C027000A7049 /* LPNetWorkManager.m in Sources */,
 				181CE0091E84B749000A7049 /* main.m in Sources */,
+				0C21C0BC1E864CE700B10D2B /* LPDemoModel.m in Sources */,
 				181CE0401E84ED4A000A7049 /* LPApiManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,6 +537,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LPNetWork/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lp.LPNetWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -533,6 +550,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LPNetWork/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lp.LPNetWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
