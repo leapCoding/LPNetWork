@@ -24,6 +24,11 @@ typedef NS_ENUM(NSUInteger, LPApiRequestType) {
     LPApiRequestTypePost,       //Post 请求
 };
 
+typedef NS_ENUM(NSUInteger, LPApiCacheType) {
+    LPApiCacheTypeNetworkOnly = 0, //只加载网络数据
+    LPApiCacheTypeCacheNetwork    //先加载缓存,然后加载网络
+};
+
 //网络请求错误类型
 typedef NS_ENUM(NSUInteger, LPApiErrorType) {
     LPApiErrorTypeDefault = 0,
@@ -43,5 +48,37 @@ typedef void(^LPCallback)(id responseObject, LPApiErrorType errorType);
 - (NSURLSessionDataTask *)callApiWithUrl:(NSString *)url params:(NSDictionary *)params requestType:(LPApiRequestType)requestType callBack:(LPCallback)callback;
 
 - (void)cancelAllRequest;
+
+///////////////////////////////缓存方法////////////////////////////////////
+
+/**
+ 异步缓存网络数据，根据请求的URL与parameters做KEY存储数据, 缓存多级页面的数据
+ 
+ @param responseObject 服务器返回的数据
+ @param URL 请求的URL地址
+ @param parameters 请求的参数
+ */
+- (void)setCache:(NSDictionary *)responseObject URL:(NSString *)URL parameters:(NSDictionary *)parameters;
+
+/**
+ 根据请求的URL与parameters 取出缓存数据
+ 
+ @param URL 请求的URL地址
+ @param parameters 请求的参数
+ @return 缓存的服务器数据
+ */
+- (NSDictionary *)cacheForURL:(NSString *)URL parameters:(NSDictionary *)parameters;
+
+/**
+ 获取网络缓存的总大小 动态单位(GB,MB,KB,B)
+ 
+ @return 网络缓存的总大小
+ */
+- (NSString *)cacheSize;
+
+/**
+ 清除网络缓存
+ */
+- (void)clearCache;
 
 @end
